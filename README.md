@@ -7,4 +7,4 @@ And remember to breath.
 
 Just open the index.html to start.
 
-![DreamWalker screenshot](./images/dreamwalkerscreen.PNG)
+![DreamWalker screenshot](./dreamwalkerscreen.gif)
