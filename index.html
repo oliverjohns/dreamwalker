@@ -1,0 +1,246 @@
+<HTML>
+<head>
+<title>Serene Dream Beam</title>
+<link rel="icon" href="globe.gif">
+<!--
+<meta name="viewport" content="width=800, initial-scale=0.5, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width" />
+-->
+<meta content='width=800; user-scalable=0;' name='viewport' />
+<style>
+
+body
+{
+Padding: 0;
+Margin: 0;
+}
+img
+{
+padding: 0;
+margin: 0;
+}
+
+.center {
+  display: block;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+}
+.three-arrows {
+    position: fixed;
+    margin: 0 auto;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.back-arrow {
+    position: fixed;
+    margin: 0 auto;
+    bottom: 0;
+    right: 2%;
+}
+.arrow {
+    max-width:100%;
+    max-height:100%;
+}
+#front-door {
+    display: block;
+}
+#main-hall {
+    display: none;
+}
+#garden {
+    display: none;
+}
+#chamber {
+    display: none;
+}
+#hall {
+    display: none;
+}
+#hall {
+    display: none;
+}
+#dock {
+    display: none;
+}
+#snowy-dock {
+    display: none;
+}
+#outside-cabin {
+    display: none;
+}
+#inside-cabin {
+    display: none;
+}
+#meadow {
+    display: none;
+}
+.hidden {
+    display: none;
+}
+
+
+</style>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body>
+<div id="front-door">
+    <img class="center" id="front-door-img" onclick="goMainHall()" src="front-door.png"></img>
+    <audio class="hidden" preload="auto" id="front-door-go-main-hall" src="front-door-go-main-hall.mp3"></audio>
+</div>
+
+<div id="main-hall">
+<img class="center"  src="Main-hall.png"></img>
+    <div class="three-arrows">
+        <table style="width:100%">
+            <th><img class="arrow" id="arrow-chamber" onclick="transition('main-hall', 'chamber', 'main-hall-go-chamber')" src="arrow-chamber.png"></img></th>
+            <th><img class="arrow" id="arrow-garden" onclick="transition('main-hall', 'garden')" src="arrow-garden.png"></img></th>
+            <th><img class="arrow" id="arrow-hall" onclick="transition('main-hall', 'hall')" src="arrow-hall.png"></img></th>
+        </table>
+    </div>
+    <audio class="hidden" preload="auto" id="main-hall-audio" src="main-hall.mp3" loop></audio>
+    <audio class="hidden" preload="auto" id="main-hall-go-chamber" src="main-hall-go-chamber.mp3"></audio>
+</div>
+
+<div id="garden">
+    <img class="center" src="sky.gif"></img>
+    <img class="center" src="garden.png"></img>
+    <!--div class="back-arrow">
+        <img class="arrow" id="arrow-back-garden" onclick="backToMainHallFrom('garden')" src="go-back-white.png"></img>
+    </div -->
+    <div class="three-arrows">
+        <table style="width:100%">
+            <th><img class="arrow" id="arrow-garden-left" onclick="transition('garden', 'dock')" src="arrow-left.png"></img></th>
+            <th><img class="arrow" id="arrow-garden-center" onclick="transition('garden', 'main-hall')" src="back-center-down.png"></img></th>
+            <th><img class="arrow" id="arrow-garden-right" onclick="transition('garden', 'meadow')" src="arrow-right.png"></img></th>
+        </table>
+    </div>
+
+    <audio class="hidden" preload="auto" id="garden-audio" src="garden.mp3" loop></audio>
+</div>
+
+<div id="meadow">
+    <img class="center" src="sky.gif"></img>
+    <img class="center" src="meadow.png"></img>
+    <!--div class="back-arrow">
+        <img class="arrow" id="arrow-back-garden" onclick="backToMainHallFrom('garden')" src="go-back-white.png"></img>
+    </div -->
+    <div class="three-arrows">
+        <table style="width:100%">
+            <th><img class="arrow" id="arrow-meadow-left" onclick="transition('meadow', 'garden')" src="arrow-left.png"></img></th>
+        </table>
+    </div>
+    <audio class="hidden" preload="auto" id="meadow-audio" src="meadow.mp3" loop></audio>
+</div>
+
+<div id="chamber">
+    <img class="center" src="chamber.png"></img>
+    <div class="back-arrow">
+        <img class="arrow" id="arrow-back-chamber" onclick="transition('chamber', 'main-hall')" src="go-back-white.png"></img>
+    </div>
+    <audio class="hidden" preload="auto" id="chamber-audio" src="chamber.mp3" loop></audio>
+</div>
+<div id="hall">
+    <img class="center" src="sky.gif"></img>
+    <img class="center" src="hall.png"></img>
+    <div class="back-arrow">
+        <img class="arrow" id="arrow-back-hall" onclick="transition('hall', 'main-hall')" src="go-back-white.png"></img>
+    </div>
+    <audio class="hidden" preload="auto" id="hall-audio" src="hall.mp3" loop></audio>
+</div>
+<div id="dock">
+    <img class="center" src="water.gif"></img>
+    <img class="center" src="dock.png"></img>
+    <div class="three-arrows">
+        <table style="width:100%">
+            <th><img class="arrow" id="arrow-dock-center" onclick="transition('dock', 'snowy-dock')" src="arrow-forward.png"></img></th>
+            <th><img class="arrow" id="arrow-dock-right" onclick="transition('dock', 'garden')" src="arrow-right.png"></img></th>
+        </table>
+    </div>
+    <audio class="hidden" preload="auto" id="dock-audio" src="dock.mp3" loop></audio>
+</div>
+<div id="snowy-dock">
+    <img class="center" src="snowy-dock.png"></img>
+    <div class="three-arrows">
+        <table style="width:100%">
+            <th><img class="arrow" id="arrow-snowy-dock-center" onclick="transition( 'snowy-dock', 'dock')" src="back-center-up.png"></img></th>
+            <th><img class="arrow" id="arrow-snowy-dock-right" onclick="transition('snowy-dock','outside-cabin')" src="arrow-right.png"></img></th>
+        </table>
+    </div>
+    <audio class="hidden" preload="auto" id="snowy-dock-audio" src="snowy-dock.mp3" loop></audio>
+</div>
+<div id="outside-cabin">
+    <img class="center" src="outside-cabin.png"></img>
+    <img class="center" src="snow.gif"></img>
+    <div class="three-arrows">
+        <table style="width:100%">
+            <th><img class="arrow" id="arrow-outside-cabin-left" onclick="transition('outside-cabin', 'snowy-dock')" src="arrow-left.png"></img></th>
+            <th><img class="arrow" id="arrow-outside-cabin-center" onclick="transition('outside-cabin', 'inside-cabin', 'outside-cabin-go-inside-cabin')" src="arrow-forward.png"></img></th>
+        </table>
+    </div>
+    <audio class="hidden" preload="auto" id="outside-cabin-audio" src="outside-cabin.mp3" loop></audio>
+    <audio class="hidden" preload="auto" id="outside-cabin-go-inside-cabin" src="outside-cabin-go-inside-cabin.mp3"></audio>
+</div>
+<div id="inside-cabin">
+    <img class="center" src="winter.gif"></img>
+    <img class="center" src="inside-cabin.png"></img>
+    <div class="back-arrow">
+        <img class="arrow" id="arrow-back-inside-cabin" onclick="transition('inside-cabin', 'outside-cabin')" src="go-back-white.png"></img>
+    </div>
+    <audio class="hidden" preload="auto" id="inside-cabin-audio" src="inside-cabin.mp3" loop></audio>
+</div>
+
+</body>
+<script>
+var alreadyTansitioning = false;
+var otherPlaces = ["garden", "chamber", "hall", "dock", "snowy-dock", "outside-cabin"] 
+
+function transition(from, to, transitionSound = null) {
+    if (transitionSound != null) {
+        document.getElementById(transitionSound).play();
+    } 
+    if (alreadyTansitioning) {
+        console.log("already transitioning, abort")
+        return;
+    }
+    console.log("transitioning");
+    alreadyTansitioning = true;
+    $('#'+from+'-audio').animate({volume: 0.0}, 2000);
+    $( "#"+from ).fadeOut( 2000, function() {
+        document.getElementById(from+"-audio").pause();
+    // Animation complete.
+        document.getElementById(to+"-audio").play();
+        $('#'+to+'-audio').animate({volume: 1.0}, 3000);
+    $("#"+to).fadeIn( 3000, function() {
+        
+    // Animation complete.
+    console.log("done transitioning")
+    alreadyTansitioning = false;
+  });
+  });
+  
+}
+
+function goMainHall() {
+    console.log("go main hall")
+    document.getElementById('front-door-go-main-hall').play();
+    document.getElementById('main-hall-audio').play();
+    for (i = 0; i < otherPlaces.length; i++) {
+        document.getElementById(otherPlaces[i]+"-audio").volume = 0;
+    }    
+    $( "#front-door" ).fadeOut( 2000, function() {
+    // Animation complete.
+    $( "#main-hall" ).fadeIn( 3000, function() {
+    // Animation complete.
+  });
+  });
+}
+</script>
+</HTML>
+
