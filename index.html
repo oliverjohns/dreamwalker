@@ -91,109 +91,109 @@ margin: 0;
 
 <body>
 <div id="front-door">
-    <img class="center" id="front-door-img" onclick="goMainHall()" src="front-door.png"></img>
-    <audio class="hidden" preload="auto" id="front-door-go-main-hall" src="front-door-go-main-hall.mp3"></audio>
+    <img class="center" id="front-door-img" onclick="goMainHall()" src="images/front-door.png"></img>
+    <audio class="hidden" preload="auto" id="front-door-go-main-hall" src="audio/front-door-go-main-hall.mp3"></audio>
 </div>
 
 <div id="main-hall">
-<img class="center"  src="Main-hall.png"></img>
+<img class="center"  src="images/Main-hall.png"></img>
     <div class="three-arrows">
         <table style="width:100%">
-            <th><img class="arrow" id="arrow-chamber" onclick="transition('main-hall', 'chamber', 'main-hall-go-chamber')" src="arrow-chamber.png"></img></th>
-            <th><img class="arrow" id="arrow-garden" onclick="transition('main-hall', 'garden')" src="arrow-garden.png"></img></th>
-            <th><img class="arrow" id="arrow-hall" onclick="transition('main-hall', 'hall')" src="arrow-hall.png"></img></th>
+            <th><img class="arrow" id="arrow-chamber" onclick="transition('main-hall', 'chamber', 'main-hall-go-chamber')" src="images/arrow-chamber.png"></img></th>
+            <th><img class="arrow" id="arrow-garden" onclick="transition('main-hall', 'garden')" src="images/arrow-garden.png"></img></th>
+            <th><img class="arrow" id="arrow-hall" onclick="transition('main-hall', 'hall')" src="images/arrow-hall.png"></img></th>
         </table>
     </div>
-    <audio class="hidden" preload="auto" id="main-hall-audio" src="main-hall.mp3" loop></audio>
-    <audio class="hidden" preload="auto" id="main-hall-go-chamber" src="main-hall-go-chamber.mp3"></audio>
+    <audio class="hidden" preload="auto" id="main-hall-audio" src="audio/main-hall.mp3" loop></audio>
+    <audio class="hidden" preload="auto" id="main-hall-go-chamber" src="audio/main-hall-go-chamber.mp3"></audio>
 </div>
 
 <div id="garden">
-    <img class="center" src="sky.gif"></img>
-    <img class="center" src="garden.png"></img>
+    <img class="center" src="gifs/sky.gif"></img>
+    <img class="center" src="images/garden.png"></img>
     <!--div class="back-arrow">
-        <img class="arrow" id="arrow-back-garden" onclick="backToMainHallFrom('garden')" src="go-back-white.png"></img>
+        <img class="arrow" id="arrow-back-garden" onclick="backToMainHallFrom('garden')" src="images/go-back-white.png"></img>
     </div -->
     <div class="three-arrows">
         <table style="width:100%">
-            <th><img class="arrow" id="arrow-garden-left" onclick="transition('garden', 'dock')" src="arrow-left.png"></img></th>
-            <th><img class="arrow" id="arrow-garden-center" onclick="transition('garden', 'main-hall')" src="back-center-down.png"></img></th>
-            <th><img class="arrow" id="arrow-garden-right" onclick="transition('garden', 'meadow')" src="arrow-right.png"></img></th>
+            <th><img class="arrow" id="arrow-garden-left" onclick="transition('garden', 'dock')" src="images/arrow-left.png"></img></th>
+            <th><img class="arrow" id="arrow-garden-center" onclick="transition('garden', 'main-hall')" src="images/back-center-down.png"></img></th>
+            <th><img class="arrow" id="arrow-garden-right" onclick="transition('garden', 'meadow')" src="images/arrow-right.png"></img></th>
         </table>
     </div>
 
-    <audio class="hidden" preload="auto" id="garden-audio" src="garden.mp3" loop></audio>
+    <audio class="hidden" preload="auto" id="garden-audio" src="audio/garden.mp3" loop></audio>
 </div>
 
 <div id="meadow">
-    <img class="center" src="sky.gif"></img>
-    <img class="center" src="meadow.png"></img>
+    <img class="center" src="gifs/sky.gif"></img>
+    <img class="center" src="images/meadow.png"></img>
     <!--div class="back-arrow">
-        <img class="arrow" id="arrow-back-garden" onclick="backToMainHallFrom('garden')" src="go-back-white.png"></img>
+        <img class="arrow" id="arrow-back-garden" onclick="backToMainHallFrom('garden')" src="images/go-back-white.png"></img>
     </div -->
     <div class="three-arrows">
         <table style="width:100%">
-            <th><img class="arrow" id="arrow-meadow-left" onclick="transition('meadow', 'garden')" src="arrow-left.png"></img></th>
+            <th><img class="arrow" id="arrow-meadow-left" onclick="transition('meadow', 'garden')" src="images/arrow-left.png"></img></th>
         </table>
     </div>
-    <audio class="hidden" preload="auto" id="meadow-audio" src="meadow.mp3" loop></audio>
+    <audio class="hidden" preload="auto" id="meadow-audio" src="audio/meadow.mp3" loop></audio>
 </div>
 
 <div id="chamber">
-    <img class="center" src="chamber.png"></img>
+    <img class="center" src="images/chamber.png"></img>
     <div class="back-arrow">
-        <img class="arrow" id="arrow-back-chamber" onclick="transition('chamber', 'main-hall')" src="go-back-white.png"></img>
+        <img class="arrow" id="arrow-back-chamber" onclick="transition('chamber', 'main-hall')" src="images/go-back-white.png"></img>
     </div>
-    <audio class="hidden" preload="auto" id="chamber-audio" src="chamber.mp3" loop></audio>
+    <audio class="hidden" preload="auto" id="chamber-audio" src="audio/chamber.mp3" loop></audio>
 </div>
 <div id="hall">
-    <img class="center" src="sky.gif"></img>
-    <img class="center" src="hall.png"></img>
+    <img class="center" src="gifs/sky.gif"></img>
+    <img class="center" src="images/hall.png"></img>
     <div class="back-arrow">
-        <img class="arrow" id="arrow-back-hall" onclick="transition('hall', 'main-hall')" src="go-back-white.png"></img>
+        <img class="arrow" id="arrow-back-hall" onclick="transition('hall', 'main-hall')" src="images/go-back-white.png"></img>
     </div>
-    <audio class="hidden" preload="auto" id="hall-audio" src="hall.mp3" loop></audio>
+    <audio class="hidden" preload="auto" id="hall-audio" src="audio/hall.mp3" loop></audio>
 </div>
 <div id="dock">
-    <img class="center" src="water.gif"></img>
-    <img class="center" src="dock.png"></img>
+    <img class="center" src="gifs/water.gif"></img>
+    <img class="center" src="images/dock.png"></img>
     <div class="three-arrows">
         <table style="width:100%">
-            <th><img class="arrow" id="arrow-dock-center" onclick="transition('dock', 'snowy-dock')" src="arrow-forward.png"></img></th>
-            <th><img class="arrow" id="arrow-dock-right" onclick="transition('dock', 'garden')" src="arrow-right.png"></img></th>
+            <th><img class="arrow" id="arrow-dock-center" onclick="transition('dock', 'snowy-dock')" src="images/arrow-forward.png"></img></th>
+            <th><img class="arrow" id="arrow-dock-right" onclick="transition('dock', 'garden')" src="images/arrow-right.png"></img></th>
         </table>
     </div>
-    <audio class="hidden" preload="auto" id="dock-audio" src="dock.mp3" loop></audio>
+    <audio class="hidden" preload="auto" id="dock-audio" src="audio/dock.mp3" loop></audio>
 </div>
 <div id="snowy-dock">
-    <img class="center" src="snowy-dock.png"></img>
+    <img class="center" src="images/snowy-dock.png"></img>
     <div class="three-arrows">
         <table style="width:100%">
-            <th><img class="arrow" id="arrow-snowy-dock-center" onclick="transition( 'snowy-dock', 'dock')" src="back-center-up.png"></img></th>
-            <th><img class="arrow" id="arrow-snowy-dock-right" onclick="transition('snowy-dock','outside-cabin')" src="arrow-right.png"></img></th>
+            <th><img class="arrow" id="arrow-snowy-dock-center" onclick="transition( 'snowy-dock', 'dock')" src="images/back-center-up.png"></img></th>
+            <th><img class="arrow" id="arrow-snowy-dock-right" onclick="transition('snowy-dock','outside-cabin')" src="images/arrow-right.png"></img></th>
         </table>
     </div>
-    <audio class="hidden" preload="auto" id="snowy-dock-audio" src="snowy-dock.mp3" loop></audio>
+    <audio class="hidden" preload="auto" id="snowy-dock-audio" src="audio/snowy-dock.mp3" loop></audio>
 </div>
 <div id="outside-cabin">
-    <img class="center" src="outside-cabin.png"></img>
-    <img class="center" src="snow.gif"></img>
+    <img class="center" src="images/outside-cabin.png"></img>
+    <img class="center" src="gifs/snow.gif"></img>
     <div class="three-arrows">
         <table style="width:100%">
-            <th><img class="arrow" id="arrow-outside-cabin-left" onclick="transition('outside-cabin', 'snowy-dock')" src="arrow-left.png"></img></th>
-            <th><img class="arrow" id="arrow-outside-cabin-center" onclick="transition('outside-cabin', 'inside-cabin', 'outside-cabin-go-inside-cabin')" src="arrow-forward.png"></img></th>
+            <th><img class="arrow" id="arrow-outside-cabin-left" onclick="transition('outside-cabin', 'snowy-dock')" src="images/arrow-left.png"></img></th>
+            <th><img class="arrow" id="arrow-outside-cabin-center" onclick="transition('outside-cabin', 'inside-cabin', 'outside-cabin-go-inside-cabin')" src="images/arrow-forward.png"></img></th>
         </table>
     </div>
-    <audio class="hidden" preload="auto" id="outside-cabin-audio" src="outside-cabin.mp3" loop></audio>
-    <audio class="hidden" preload="auto" id="outside-cabin-go-inside-cabin" src="outside-cabin-go-inside-cabin.mp3"></audio>
+    <audio class="hidden" preload="auto" id="outside-cabin-audio" src="audio/outside-cabin.mp3" loop></audio>
+    <audio class="hidden" preload="auto" id="outside-cabin-go-inside-cabin" src="audio/outside-cabin-go-inside-cabin.mp3"></audio>
 </div>
 <div id="inside-cabin">
-    <img class="center" src="winter.gif"></img>
-    <img class="center" src="inside-cabin.png"></img>
+    <img class="center" src="gifs/winter.gif"></img>
+    <img class="center" src="images/inside-cabin.png"></img>
     <div class="back-arrow">
-        <img class="arrow" id="arrow-back-inside-cabin" onclick="transition('inside-cabin', 'outside-cabin')" src="go-back-white.png"></img>
+        <img class="arrow" id="arrow-back-inside-cabin" onclick="transition('inside-cabin', 'outside-cabin')" src="images/go-back-white.png"></img>
     </div>
-    <audio class="hidden" preload="auto" id="inside-cabin-audio" src="inside-cabin.mp3" loop></audio>
+    <audio class="hidden" preload="auto" id="inside-cabin-audio" src="audio/inside-cabin.mp3" loop></audio>
 </div>
 
 </body>
